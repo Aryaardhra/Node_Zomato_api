@@ -18,6 +18,7 @@ if(key === authKey){
     return false
 }
 }
+
 //get heart beat
 app.get('/',(req,res)=>{
     res.status(200).send('Health Ok')
@@ -29,7 +30,6 @@ app.use(bodyParser.json());
 app.use(cors());
 
 //List of city
-
 app.get('/location',(req,res)=>{
     let key = req.header('x-basic-token')
     if(auth(key)){
@@ -38,8 +38,7 @@ app.get('/location',(req,res)=>{
         })
     }else{
         res.status(403).send('Not Authenticated Call')
-    }
-    
+    }   
 })
 
 // List of restaurants
@@ -130,7 +129,6 @@ app.get('/menu/:id',(req,res) => {
 })
 
 //place order
-
 app.post('/placeOrder',(req, res) => {
 let data = req.body;
 db.collection('orders').insert(data,(err) => {
@@ -140,7 +138,6 @@ db.collection('orders').insert(data,(err) => {
 })
 
 //get order
-
 app.get('/orders',(req,res) => {
     let query =  {};
     let email = req.query.email;
@@ -154,7 +151,6 @@ db.collection('orders').find(query).toArray((err,data) => {
 })
 
 // Update Orders
-
 app.put('/updateOrders',(req,res) => {
     db.collection('orders').updateOne(
         {_id: mongo.ObjectId(req.body._id)},
@@ -195,6 +191,7 @@ app.delete('/removeOrder',(req,res) => {
         }
     })
 })
+
 MongoClient.connect(mongoUrl,(err,client)=>{
     if(err) console.log(`Error While Connecting to mongo`);
     db = client.db('sampledata')
