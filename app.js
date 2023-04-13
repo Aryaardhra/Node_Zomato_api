@@ -9,7 +9,7 @@ let bodyParser = require('body-parser');
 let cors = require('cors');
 let port = process.env.PORT || 1100;
 let db;
-let authKey = process.env.authKey;
+//let authKey = process.env.authKey;
 
 function auth(key ){
 if(key === authKey){
@@ -31,14 +31,14 @@ app.use(cors());
 
 //List of city
 app.get('/location',(req,res)=>{
-    let key = req.header('x-basic-token')
-    if(auth(key)){
+   /* let key = req.header('x-basic-token')
+    if(auth(key)){*/
         db.collection('location').find().toArray((err,data)=>{
             res.status(200).send(data)
         })
-    }else{
+    /*}else{
         res.status(403).send('Not Authenticated Call')
-    }   
+    }  */ 
 })
 
 // List of restaurants
