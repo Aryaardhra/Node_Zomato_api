@@ -112,8 +112,8 @@ app.get('/mealTypes',(req,res)=>{
 
 //details of restaurants
 app.get('/details/:id',(req,res) => {
-    let _id = mongo.ObjectId(req.params.id)
-    db.collection('restaurants').find({_id:_id}).toArray((err,data)=>{
+    let restId = Number(req.params.id)
+    db.collection('restaurants').find({restaurant_id:restId}).toArray((err,data)=>{
         if(err) throw err;
         res.status(200).send(data)
     })
