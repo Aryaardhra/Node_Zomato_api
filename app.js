@@ -172,9 +172,11 @@ app.post('/menuItem',(req, res) => {
             if(err) throw err;
             res.send(data)
         })
-    }else{
-        res.send('Please Pass the array ')
     }
+    /*
+    else{
+        res.send('Please Pass the array ')
+    }*/
 })
 
 //delete order
