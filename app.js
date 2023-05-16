@@ -175,8 +175,7 @@ app.post('/menuItem',(req, res) => {
     }
     
     else{
-        /*res.send('Please Pass the array ')*/
-        res.send(res.json())
+        res.send('Please Pass the array ')
     }
 })
 
