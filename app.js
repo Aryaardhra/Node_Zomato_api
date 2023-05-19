@@ -173,10 +173,10 @@ app.post('/menuItem',(req, res) => {
             res.send(data)
         })
     }
-    /*
+    
     else{
-        res.send('Please Pass the array ')
-    }*/
+        res.send({"message":"please pass the array"})
+    }
 })
 
 //delete order
