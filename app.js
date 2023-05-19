@@ -11,13 +11,13 @@ let port = process.env.PORT || 1100;
 let db;
 //let authKey = process.env.authKey;
 
-function auth(key ){
+/*function auth(key ){
 if(key === authKey){
     return true
 }else{
     return false
 }
-}
+}*/
 
 //get heart beat
 app.get('/',(req,res)=>{
@@ -172,6 +172,9 @@ app.post('/menuItem',(req, res) => {
             if(err) throw err;
             res.send(data)
         })
+    }
+    else if(err){
+        console.log(err)
     }
     
     else{

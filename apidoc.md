@@ -3,53 +3,53 @@
 > List of city
  (GET) http://localhost:1009/location
 
- > https://zomatonode.onrender.com/location
+ > https://lets-order.onrender.com/location
 
  > List of restaurants 
  ( GET) http://localhost:1009/restaurants
 
- > https://zomatonode.onrender.com/restaurants
+ > https://lets-order.onrender.com/restaurants
 
 > restaurants wrt city
 (GET) http://localhost:1009/restaurants?stateId=4
 
-> https://zomatonode.onrender.com/restaurants?stateId=4
+> https://lets-order.onrender.com/restaurants?stateId=4
 
 >List of MealTypes
 (GET) http://localhost:1009/mealTypes
 
-> https://zomatonode.onrender.com/mealTypes
+> https://lets-order.onrender.com/mealTypes
 
 //Page2 (listing Page)
 
 Restaurants wrt meal
 > (GET) http://localhost:1009/restaurants?mealId=4
 
-> https://zomatonode.onrender.com/restaurants?mealId=4
+> https://lets-order.onrender.com/restaurants?mealId=4
 
 > http://localhost:1009/restaurants?stateId=1&mealId=3
 
->https://zomatonode.onrender.com/restaurants?stateId=1&mealId=3
+>https://lets-order.onrender.com/restaurants?stateId=1&mealId=3
 
 > Restaurants wrt to meal + cuisine
  (GET) http://localhost:1009/filter/2?cuisineId=4
 
- > https://zomatonode.onrender.com/filter/2?cuisineId=4
+ > https://lets-order.onrender.com/filter/2?cuisineId=4
 
 > Restaurants sort wrt to meal+cost 
 (GET) http://localhost:1009/filter/1?lcost=700&hcost=2000
 
-> https://zomatonode.onrender.com/filter/1?lcost=700&hcost=2000
+> https://lets-order.onrender.com/filter/1?lcost=700&hcost=2000
  
  >Restaurants sort wrt to cost
  (GET) http://localhost:1009/filter/2?cuisineId=1&sort=-1
 
- > https://zomatonode.onrender.com/filter/2?cuisineId=1&sort=-1
+ > https://lets-order.onrender.com/filter/2?cuisineId=1&sort=-1
 
  Pagination
 http://localhost:1009/filter/2?cuisineId=1&skip=2&limit=2
 
-> https://zomatonode.onrender.com/filter/2?cuisineId=1&skip=2&limit=2
+> https://lets-order.onrender.com/filter/2?cuisineId=1&skip=2&limit=2
 
 //Page3 (details Page)
 
@@ -58,7 +58,7 @@ http://localhost:1009/filter/2?cuisineId=1&skip=2&limit=2
 > Menu wrt restaurants
 (GET) http://localhost:1009/menu/4
 
-> https://zomatonode.onrender.com/menu/4
+> https://lets-order.onrender.com/menu/4
 
 //Page4 (placeOrder Page)
 
@@ -74,12 +74,12 @@ http://localhost:1009/filter/2?cuisineId=1&skip=2&limit=2
 > List All Order Placed
 (GET) http://localhost:1009/orders
 
-> https://zomatonode.onrender.com/orders
+> https://lets-order.onrender.com/orders
 
 > Order wrt email
 (GET) http://localhost:1009/orders?email=anchal@gmail.com
 
-> https://zomatonode.onrender.com/orders?email=anchal@gmail.com
+> https://lets-order.onrender.com/orders?email=anchal@gmail.com
 
 > Delete Order
 (Delete) http://localhost:1009/removeOrder
