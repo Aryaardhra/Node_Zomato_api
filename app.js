@@ -175,7 +175,7 @@ app.post('/menuItem',(req, res) => {
     }
     
     else{
-        res.send('Plese pass data as array like {"id":[4,6,12]}')
+        res.send( {"id":[4,6,12]})
     }
 })
 
