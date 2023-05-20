@@ -28,6 +28,7 @@ app.get('/',(req,res)=>{
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.json());
 
 //List of city
 app.get('/location',(req,res)=>{
@@ -175,8 +176,8 @@ app.post('/menuItem',(req, res) => {
     }
     
     else{
-        res.send(JSON.stringify({key:"please pass the array"}));
-        
+       /* res.send(JSON.stringify({key:"please pass the array"}));*/
+        res.json({"id":"please pass the array"})
     }
 })
 
