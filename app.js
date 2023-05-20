@@ -175,7 +175,8 @@ app.post('/menuItem',(req, res) => {
     }
     
     else{
-        res.send( {"id":[4,6,12]})
+        res.send(JSON.stringify({key:"please pass the array"}));
+        
     }
 })
 
