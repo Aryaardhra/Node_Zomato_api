@@ -177,7 +177,7 @@ app.post('/menuItem',(req, res) => {
     
     else{
        /* res.send(JSON.stringify({key:"please pass the array"}));*/
-        res.json({"id":"please pass the array"})
+        res.send(data)
     }
 })
 
