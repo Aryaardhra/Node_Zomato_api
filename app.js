@@ -171,7 +171,7 @@ app.post('/menuItem',(req, res) => {
     if(Array.isArray(req.body.id)){
         db.collection('menu').find({menu_id: {$in:req.body.id}}).toArray((err,data) => {
             if(err) throw err;
-            res.json({data})
+            res.json({"data":data})
         })
     }
     
