@@ -171,13 +171,12 @@ app.post('/menuItem',(req, res) => {
     if(Array.isArray(req.body.id)){
         db.collection('menu').find({menu_id: {$in:req.body.id}}).toArray((err,data) => {
             if(err) throw err;
-            res.send(data)
+            res.json(data)
         })
     }
     
     else{
-       /* res.send(JSON.stringify({key:"please pass the array"}));*/
-        res.send(data)
+        res.json({"message":"please pass the array"})
     }
 })
 
