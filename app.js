@@ -24,10 +24,16 @@ app.get('/',(req,res)=>{
     res.status(200).send('Health Ok')
 })
 
+var corsOptions = {
+    origin: "https://lets-order.onrender.com"
+  };
+  
+  app.use(cors(corsOptions));
+
 // middleware
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json());
 
 //List of city
@@ -171,7 +177,7 @@ app.post('/menuItem',(req, res) => {
     if(Array.isArray(req.body.id)){
         db.collection('menu').find({menu_id: {$in:req.body.id}}).toArray((err,data) => {
             if(err) throw err;
-            res.json([data])
+            res.json(data)
         })
     }
     
